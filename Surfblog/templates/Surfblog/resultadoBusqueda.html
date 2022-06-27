@@ -1,0 +1,35 @@
+{% extends 'Surfblog/padre.html' %}
+
+{% load static %}
+
+{% block contenido_avatar %}
+
+    <img class='mx-2' height='50px' src='{{url}}' alt='Avatar' title='Avatar'>
+
+{% endblock %}
+
+{% block titulo_header %}
+
+
+
+
+{% if posteo %}
+
+    <div class='container px-4 px-lg-5'>
+        <div class='row gx-4 gx-lg-5 justify-content-center'>
+            <div class='col-md-10 col-lg-8 col-xl-7'>
+                <div class='card mb-5'>
+                    <img class='card-img-top' src='{% static "SurfBlog/assets/img/travel.jpg" %}' alt='Imagen Resultado' title='Imagen Resultado' loading='lazy'>
+                    <div class='card-body'>
+                        <div class='small text-muted'>{{post.fecha}}</div>
+                        <h2 class='card-title'>{{post.titulo}}</h2>
+                        <p class='card-text'>{{post.autor}}</p>
+                        <a class='btn btn-warning' href='{% url "Post" posteo.titulo%}'>LEER </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+

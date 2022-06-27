@@ -1,0 +1,40 @@
+{% extends 'Surfblog/padre.html' %}
+
+{% load static %}
+
+{% block contenido_avatar %}
+
+    <img class='mx-2' height='50px' src='{{url}}' alt='Avatar' title='Avatar'>
+
+{% endblock %}
+
+
+
+{% block contenido_principal %}
+
+    <article class='mb-3'>
+        <div class='container px-4 px-lg-5'>
+            
+            <div class='row gx-4 gx-lg-5 justify-content-center'>
+                <div class='col-md-10 col-lg-8 col-xl-7 post-preview'>
+                    <h2 class='post-title'>{{post.titulo}}</h2>
+                    <img class='card-img-top' src='{% static "SurfBlog/assets/img/post.jpg" %}' alt='Imagen Resultado' title='Imagen Resultado' loading='lazy'>
+                    <hr class='my-4' />
+                    <p class='post-meta'>
+                        Posteado por
+                        <span>{{post.autor}}</span>
+                        {{post.fecha}}
+                    </p>
+                    <hr class='my-4' />
+                    <p>{{post.cuerpo}}</p>
+                    <hr class='my-4' />
+                    
+                    <button type='button' class='btn btn-warning position-relative mb-3'>
+                        <a href='{% url "listaPosteos" %}' style='color: black;'>VOLVER</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </article>
+    
+{% endblock %}

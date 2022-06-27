@@ -1,0 +1,37 @@
+{% extends 'Surfblog/padre.html' %}
+
+{% load static %}
+
+{% block contenido_avatar %}
+
+    <img class='mx-2' height='50px' src='{{url}}' alt='Avatar' title='Avatar'>
+
+{% endblock %}
+
+{% block titulo_header %}
+
+    <h1>Sobre Nosotros</h1>
+    <span class='subheading' style="color:white">Conocenos un poco más</span>
+
+{% endblock %}
+
+{% block contenido_principal %}
+
+    <main class='mb-4'>
+        <div class='container px-4 px-lg-5'>
+            <div class='row gx-4 gx-lg-5 justify-content-center'>
+                <div class='col-md-10 col-lg-8 col-xl-7'>
+                    <p>Somos personas que recientemente decidimos dejar todo para recorrer el mundo en busca de las mejores olas para surfar. En este blog te contaremos nuestras aventuras.</p>
+                    <p>Como muchas personas mas, estamos dando nuestros primeros pasos fuera de casa, de apoco , ademas del surf, vamos conociendo nuevas culturas, y vamos armando nuestra propia historia.
+                    <p>Compartinos tus experiencias surfisticas  en este pequeño rincon y deja que personas de todas partes conozcan tu historia</p>
+                    </p>
+                    <img class='img-fluid' src='{% static "SurfBlog/assets/img/sobreNosotros.jpg" %}' alt='Sobre Nosotros' title='Sobre Nosotros' loading='lazy'>
+                    <button type='button' class='btn btn-warning position-relative mt-3'>
+                        <a href='{% url "Inicio" %}' style='color: black;'>IR A INICIO</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
